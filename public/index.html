@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+   
+    var token = '2lrSJ_X6tDn3jFGV3asw_6wDHtfOzIrv811mJAecojcs0G252bo54zJIGxjX4QWdAZrPxlzUQeF23uqHvB9R32FwL2552pTKakSc5xDnbxLYAfnHAo7WufjluUBr39g7VjaVkRTVg8N_O96L1KQ2eu3FG8Zwn.Y6UL2jeXiGHbOthPNF4i86bK4vGKeu_GcbtOHc2T_WkQYKlqhT9X7PClBKqguvU5KZhf4B9iQxpvhFKgj9I8j6WClgKoPlYHEScArP_qPvHJ8H2npmAMWm3LPsx_TiogCBxek7yzDlh2k3HIJvA8gYy7VYhYgaF6aMjX47a1F.ZbH.bjXQ8Skxm6k_C_3Qthnn_lE7XdBBXE.Op8gTwhk4aXHP3kU.KSYUw0G6lTECiEQscxjVhMPVECKaXcSxJeEGDKa.7g7PmXZuQR3sMzJV5tZBUt01HYnyzeJpCyZgTRRXifLycHoVaF8A.GpUEizc3HN8W4KJhv7U2CdtBNnOPh2wzwdbGYLranCQmwa7yyCeKWqTmeeGk6eX69L2HklDALvR.m6Xuqy0RnBwRNVv0N7gGBDxrpXs8R1mBUjJnyzv5jT205Wv1WAt5hdhF5BD4rIipFaZFf3CABXS6j9EFesVxJtnewttCP.OfqFf4Ntrsh2iCqL2ZTchf9TNDlT66G94wJ1rHHY0Wdj1qgl3fBj4ML0jYdVYWlAqMVaVkimZnlVg5W9yPOwMnObJ417qsjLubX9uL8y_O7r_LJIwV62f_rFVSXxxnkXNAH_OLvNHcMDXNCPEPzVeOJFW_Qe9VBNFxJV2qyc7Bg--';
+
+    $.ajax({
+        method: 'GET',
+        url: '/yahooContacts',
+        dataType:'json',
+        data:{
+            search:'roque',
+            access_token:token
+        }
+    }).then(function(res){
+    	console.log(res);
+    })
+    </script>
+</head>
+
+<body>
+    <a href="https://api.login.yahoo.com/oauth2/request_auth?client_id=dj0yJmk9WUtmdnFzN3A0bmRrJmQ9WVdrOVdqWlliWFJGTXpBbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmeD1lNA--&redirect_uri=https://www.glinzz.com/&response_type=token&language=en-us">Autorizar</a>
+    <p>
+        Este boton va a pedir autorización y a volver a una url como https://www.glinzz.com/ con el token, no funciona con otra url, hay que copiar el token de la url y pegarlo en la variable que esta al comienzo de este html
+    </p>
+
+    <h3>Mirar la consola</h3>
+</body>
+
+</html>
